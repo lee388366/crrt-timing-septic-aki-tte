@@ -1,0 +1,29 @@
+dag {
+  # T0 is a design/selection anchor and is intentionally excluded from the causal edge list.
+  L0
+  Lk
+  Ak
+  Lkp1
+  Y
+  Ck
+  O
+  U
+  # Causal edges
+  L0 -> Lk
+  L0 -> Ak
+  L0 -> Ck
+  L0 -> Y
+  Lk -> Ak
+  Lk -> Ck
+  Lk -> Lkp1
+  Lk -> Y
+  Ak -> Lkp1
+  Ak -> Y
+  Ak -> Ck
+  Lkp1 -> Y
+  Ck -> O
+  Y -> O
+  U -> Ak
+  U -> Ck
+  U -> Y
+}

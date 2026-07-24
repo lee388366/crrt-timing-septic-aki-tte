@@ -1,0 +1,21 @@
+# No data in this repository (MIMIC-IV DUA)
+*.csv
+*.tsv
+*.rds
+*.rda
+*.RData
+*.xlsx
+*.xls
+*.parquet
+*.dta
+# outputs
+*.png
+*.pdf
+*.svg
+*.docx
+# scratch
+analysis/data/
+.Rhistory
+.DS_Store
+__pycache__/
+*.log
