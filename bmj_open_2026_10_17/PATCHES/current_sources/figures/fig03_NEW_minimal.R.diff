@@ -1,0 +1,16 @@
+--- neutral_source/fig03_NEW_minimal.R
++++ candidate/fig03_NEW_minimal.R
+@@ -28,11 +28,11 @@
+ base_dir    <- file.path(Sys.getenv("CRRT_ANALYSIS_ROOT"), "strictK3_primary_v2")
+ data_dir    <- file.path(base_dir, "data")
+ results_dir <- file.path(base_dir, "results")
+-ch01_dir    <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_fig3/NEW_inputs/ch01")
++ch01_dir <- Sys.getenv("CRRT_FIG3_CH01_DIR")
+ work_dir    <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out")
+ forest_csv  <- Sys.getenv("FIG3_FOREST_CSV", file.path(work_dir, "run16", "strictK3_v2_forest_plot_source_ch01.csv"))
+ qaph_csv    <- Sys.getenv("FIG3_QAPH_CSV",   file.path(work_dir, "run14", "NEW", "strictK3_v2_QA_ph_treatment_results.csv"))
+-out_dir     <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_fig3/NEW")
++out_dir <- Sys.getenv("CRRT_FIG3_OUT")
+ dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+ COL_EARLY <- "#4DBBD5"
+ COL_DEFERRED <- "#E64B35"

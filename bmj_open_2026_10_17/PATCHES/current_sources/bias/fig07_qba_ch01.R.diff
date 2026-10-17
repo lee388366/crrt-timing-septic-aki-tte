@@ -1,0 +1,43 @@
+--- neutral_source/fig07_qba_ch01.R
++++ candidate/fig07_qba_ch01.R
+@@ -72,7 +72,8 @@
+   invisible(dev.off())
+   c(png = png_path, pdf = pdf_path)
+ }
+-out_dir <- Sys.getenv("FIG7_OUT_DIR", file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "10_图件/out/fig07"))
++out_dir <- Sys.getenv("FIG7_OUT_DIR")
++stopifnot(nzchar(out_dir), nzchar(Sys.getenv("FIG7_QBA_DIR")))
+ dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+ 
+ read_csv_quiet <- function(path) {
+@@ -105,15 +106,15 @@
+       TRUE ~ target
+     ),
+     label_x = case_when(
+-      grepl("null", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "0") == "1") 1.35 else 1.38,
+-      grepl("benefit", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "0") == "1") 1.58 else 1.72,
+-      grepl("harm", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "0") == "1") 1.60 else 1.40,
++      grepl("null", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "1") == "1") 1.35 else 1.38,
++      grepl("benefit", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "1") == "1") 1.58 else 1.72,
++      grepl("harm", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "1") == "1") 1.60 else 1.40,
+       TRUE ~ rr + 0.10
+     ),
+     label_y = case_when(
+-      grepl("null", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "0") == "1") 1.055 else 1.20,
+-      grepl("benefit", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "0") == "1") 1.53 else 1.64,
+-      grepl("harm", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "0") == "1") 1.20 else 1.36,
++      grepl("null", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "1") == "1") 1.055 else 1.20,
++      grepl("benefit", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "1") == "1") 1.53 else 1.64,
++      grepl("harm", target, ignore.case = TRUE) ~ if (Sys.getenv("FIG7_COMMON_OUTCOME", "1") == "1") 1.20 else 1.36,
+       TRUE ~ rr
+     )
+   )
+@@ -140,7 +141,7 @@
+   scale_y_continuous(breaks = seq(1, 3, 0.5)) +
+   labs(
+     title = "Supplementary Figure S6. Quantitative bias analysis tipping points",
+-    subtitle = if (Sys.getenv("FIG7_COMMON_OUTCOME", "0") == "1") "Common-outcome HR-to-RR approximation; equal-strength confounding thresholds." else "Equal-strength points show RR needed to move the primary HR to selected thresholds.",
++    subtitle = if (Sys.getenv("FIG7_COMMON_OUTCOME", "1") == "1") "Common-outcome HR-to-RR approximation; equal-strength confounding thresholds." else "Equal-strength points show RR needed to move the primary HR to selected thresholds.",
+     x = "RR: unmeasured confounder with early CRRT",
+     y = "RR: unmeasured confounder with all-cause death by day 28"
+   ) +

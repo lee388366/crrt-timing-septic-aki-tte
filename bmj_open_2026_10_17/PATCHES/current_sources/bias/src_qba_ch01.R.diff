@@ -1,0 +1,11 @@
+--- neutral_source/src_qba_ch01.R
++++ candidate/src_qba_ch01.R
+@@ -15,7 +15,7 @@
+ # CH-01 改动（仅路径）：输入改读本目录下的 CH-01 版 primary results；产物落本目录，不覆盖原 results/
+ source_dir <- Sys.getenv("QBA_SOURCE_DIR", file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "10_图件/out/fig07/qba_ch01"))
+ qba_only <- identical(Sys.getenv("QBA_ONLY", "0"), "1")
+-qba_mode <- Sys.getenv("QBA_MODE", "legacy")
++qba_mode <- Sys.getenv("QBA_MODE", "common_outcome")
+ stopifnot(qba_mode %in% c("legacy", "common_outcome"))
+ results_dir <- Sys.getenv("QBA_RESULTS_DIR", source_dir)
+ if (qba_only && normalizePath(results_dir, mustWork = FALSE) == normalizePath(source_dir)) {

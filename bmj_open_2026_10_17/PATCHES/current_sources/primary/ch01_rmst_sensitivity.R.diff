@@ -1,0 +1,12 @@
+--- neutral_source/ch01_rmst_sensitivity.R
++++ candidate/ch01_rmst_sensitivity.R
+@@ -1,7 +1,7 @@
+ suppressPackageStartupMessages({library(dplyr); library(survival)})
+ set.seed(20260602)
+-OUT <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "08_CH01/out")
+-d <- readRDS(file.path(OUT,"ccw_ch01_dod.rds"))
++OUT <- Sys.getenv("CRRT_PRIMARY_OUT")
++d <- readRDS(Sys.getenv("CRRT_CH01_CCW"))
+ rmst_wkm <- function(times, events, weights, tau=28){
+   fit <- survfit(Surv(times, events) ~ 1, weights=weights)
+   tt <- c(0, fit$time); ss <- c(1, fit$surv)

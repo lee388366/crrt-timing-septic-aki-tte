@@ -1,0 +1,57 @@
+--- neutral_source/fig06_bayes_ch01.R
++++ candidate/fig06_bayes_ch01.R
+@@ -72,7 +72,8 @@
+   invisible(dev.off())
+   c(png = png_path, pdf = pdf_path)
+ }
+-out_dir <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "10_图件/out/fig06")
++out_dir <- Sys.getenv("CRRT_FIG6_OUT_DIR")
++stopifnot(nzchar(out_dir))
+ dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+ 
+ read_csv_quiet <- function(path) {
+@@ -88,8 +89,11 @@
+ # Supplement Figure S5: Bayesian prior-likelihood-posterior
+ # -----------------------------------------------------------------------------
+ 
+-theta_hat <- log(1.04438401026141)   # CH-01 主人群点估计
+-se_hat <- (log(1.18184543930523) - log(0.922910834711954)) / (2 * 1.959964)   # CH-01 95% CI
++current_summary <- readr::read_csv(Sys.getenv("CH01_PRIMARY_CSV"), show_col_types = FALSE)
++current_primary <- current_summary[current_summary$population == "Equipoise SOFA 8-14", ]
++stopifnot(nrow(current_primary) == 1L)
++theta_hat <- log(current_primary$hr)
++se_hat <- (log(current_primary$ci_upper) - log(current_primary$ci_lower)) / (2 * 1.959964)
+ 
+ posterior_from_prior <- function(m0, s0) {
+   prec <- 1 / s0^2 + 1 / se_hat^2
+@@ -117,7 +121,7 @@
+     ps = tmp$ps,
+     posterior_median_hr = exp(pm),
+     `Important benefit\nHR < 0.900` = pnorm((log(0.90) - pm) / ps),
+-    `No clinically important effect\n0.900-1.100` = pnorm((log(1.10) - pm) / ps) - pnorm((log(0.90) - pm) / ps),
++    `No clinically\nimportant effect\n0.900-1.100` = pnorm((log(1.10) - pm) / ps) - pnorm((log(0.90) - pm) / ps),
+     `Important harm\nHR > 1.100` = 1 - pnorm((log(1.10) - pm) / ps)
+   ) %>%
+   ungroup() %>%
+@@ -160,10 +164,10 @@
+     region = recode(
+       region,
+       "Important benefit\nHR < 0.900" = "Benefit\nHR < 0.900",
+-      "No clinically important effect\n0.900-1.100" = "No clinically important effect\n0.900-1.100",
++      "No clinically\nimportant effect\n0.900-1.100" = "No clinically\nimportant effect\n0.900-1.100",
+       "Important harm\nHR > 1.100" = "Harm\nHR > 1.100"
+     ),
+-    region = factor(region, levels = c("Benefit\nHR < 0.900", "No clinically important effect\n0.900-1.100", "Harm\nHR > 1.100")),
++    region = factor(region, levels = c("Benefit\nHR < 0.900", "No clinically\nimportant effect\n0.900-1.100", "Harm\nHR > 1.100")),
+     prior = factor(prior, levels = c("Data-dominant", "Neutral", "Skeptical"))
+   )
+ 
+@@ -174,7 +178,7 @@
+   scale_y_continuous(labels = percent_format(accuracy = 1), limits = c(0, 0.90), expand = expansion(mult = c(0, 0.06))) +
+   scale_fill_manual(values = c(
+     "Benefit\nHR < 0.900" = COL_EARLY,
+-    "No clinically important effect\n0.900-1.100" = COL_HEADER,
++    "No clinically\nimportant effect\n0.900-1.100" = COL_HEADER,
+     "Harm\nHR > 1.100" = COL_DEFERRED
+   )) +
+   labs(x = NULL, y = "Posterior probability") +

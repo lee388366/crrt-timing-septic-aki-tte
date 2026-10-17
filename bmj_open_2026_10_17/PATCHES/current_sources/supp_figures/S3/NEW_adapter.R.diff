@@ -1,0 +1,11 @@
+--- neutral_source/NEW_adapter.R
++++ candidate/NEW_adapter.R
+@@ -29,7 +29,7 @@
+ results_dir <- file.path(base_dir, "results")
+ work_dir    <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out")
+ bandscan_csv <- Sys.getenv("FIG5_BANDSCAN_CSV", file.path(work_dir, "run15", "行值_bandscan_接口.csv"))
+-out_dir     <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_supp_figures/S3/NEW")
++out_dir <- Sys.getenv("CRRT_FIG_S3_OUT")
+ dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+ COL_EARLY <- "#4DBBD5"
+ COL_DEFERRED <- "#E64B35"

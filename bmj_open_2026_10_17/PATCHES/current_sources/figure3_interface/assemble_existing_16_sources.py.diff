@@ -1,0 +1,49 @@
+--- neutral_source/assemble_existing_16_sources.py
++++ candidate/assemble_existing_16_sources.py
+@@ -1,16 +1,17 @@
+ from pathlib import Path
+ import csv,json,hashlib,copy,difflib,shutil
+-root=Path.cwd();p=root/'09_工作稿/out/ch24_q4_corrected_fig3';i=p/'NEW_inputs';i.mkdir(exist_ok=True)
++import os
++root=Path(os.environ["CRRT_WORKSPACE_ROOT"]);p=Path(os.environ["CRRT_FIG3_INTERFACE_OUT"]);i=p/"NEW_inputs";i.mkdir(parents=True,exist_ok=True)
+ def read(f):return list(csv.DictReader(Path(f).open()))
+ def unique(rows,**keys):
+  found=[r for r in rows if all(r[k]==v for k,v in keys.items())];assert len(found)==1,(keys,len(found));return found[0]
+-primfile=root/'09_工作稿/out/ch24_q4_corrected_primary/ch01_primary_dod_CORRECTED_CANDIDATE.csv';prim=read(primfile)
+-sofafile=root/'09_工作稿/out/ch24_q4_corrected_sofa_era/NEW/strictK3_v2_sofa_strata_results.csv';sofa=read(sofafile)
+-anchorfile=root/'09_工作稿/out/ch24_q4_corrected_anchor_outcomes/NEW/anchor_CH01_current_4.csv';anchors=read(anchorfile)
+-bridgefile=p/'BRIDGE_NEW_4.csv';bridge=read(bridgefile)
+-pathfile=root/'09_工作稿/out/ch24_q4_corrected_path/NEW/results/strictK3_v2_path_adjusted_ipcw_results.csv';paths=read(pathfile)
+-rescuefile=root/'09_工作稿/out/ch24_q4_corrected_rescue_outcomes/NEW/strictK3_v2_rescue_sensitivity_model_results.csv';rescue=read(rescuefile)
+-oldfore=root/'09_工作稿/out/run15/行值_forest_接口.csv';oldpr=root/'09_工作稿/out/run17/行值_forest_接口_15行.csv';olde=root/'09_工作稿/out/run15/行值_era_stratified_接口.csv';lineage={}
++primfile=Path(os.environ['CH01_PRIMARY_CSV']);prim=read(primfile)
++sofafile=Path(os.environ['CRRT_FIG3_SOFA_CSV']);sofa=read(sofafile)
++anchorfile=Path(os.environ['CRRT_FIG3_ANCHOR_CSV']);anchors=read(anchorfile)
++bridgefile=Path(os.environ['CRRT_FIG3_BRIDGE_CSV']);bridge=read(bridgefile)
++pathfile=Path(os.environ['CRRT_FIG3_PATH_CSV']);paths=read(pathfile)
++rescuefile=Path(os.environ['CRRT_FIG3_RESCUE_CSV']);rescue=read(rescuefile)
++oldfore=Path(os.environ['CRRT_FIG3_FOREST_TEMPLATE']);oldpr=Path(os.environ['CRRT_FIG3_PATH_RESCUE_TEMPLATE']);olde=Path(os.environ['CRRT_FIG3_ERA_TEMPLATE']);lineage={}
+ def patch(row):
+  key=row['analysis'];z=copy.copy(row)
+  if key in ['Primary SOFA 8-14 equipoise','Full strictK3_v2 primary cohort']:
+@@ -28,7 +29,7 @@
+  assert float(rr['n_patients'])==float(z['n_patients'])
+  if 'early_n'in rr:assert float(rr['early_n'])==float(z['early_n'])
+  for target,field in zip(['weighted_hr','ci_lower','ci_upper','p_value'],cols):z[target]=rr[field]
+- lineage[key]={'source':str(f.relative_to(root)),'source_row':{k:rr[k]for k in ['analysis','population']if k in rr},'source_columns':cols,'n_exact':True,'early_n_same_original_key':z['early_n']}
++ lineage[key]={'source':str(f),'source_row':{k:rr[k]for k in ['analysis','population']if k in rr},'source_columns':cols,'n_exact':True,'early_n_same_original_key':z['early_n']}
+  return z
+ def write(f,rows):
+  with f.open('w',newline='')as o:w=csv.DictWriter(o,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
+@@ -36,10 +37,6 @@
+  rows=read(source);out=[patch(r)for r in rows];assert len(rows)==len(out);write(i/name,out)
+ old=read(olde);assert len(old)==1;z=old[0].copy();rr=unique(bridge,analysis='Calendar-era stratified Cox (NEW CH-01)',population='SOFA 8-14')
+ for target,field in [('HR','HR'),('CI_lo','ci_lower'),('CI_hi','ci_upper'),('p_value','p_value'),('ph_global_p','ph_global_p')]:z[target]=rr[field]
+-write(i/'era.csv',[z]);lineage['Calendar-era stratified']={'source':str(bridgefile.relative_to(root)),'original_source':'09_工作稿/out/run15/run15_NEW_anchors_L0_era.R L82–86; original cox1 AST and CH01 columns','primary_rows_exact':True}
++write(i/'era.csv',[z]);lineage['Calendar-era stratified']={'source':str(bridgefile),'original_source':'09_工作稿/out/run15/run15_NEW_anchors_L0_era.R L82–86; original cox1 AST and CH01 columns','primary_rows_exact':True}
+ (i/'ch01').mkdir(exist_ok=True);shutil.copyfile(primfile,i/'ch01/ch01_primary_dod.csv')
+ (p/'16_ROW_SOURCE_LINEAGE.json').write_text(json.dumps({'unique_scientific_rows':len(lineage),'rows':lineage,'no_new_scientific_estimates_or_analyses':'Only original era/L0 bridge cox1/mk calls rerun after OLD4rowbyteexact; all other values read already gated corrected branch outputs.','original_labels_groups_order_and_N_early_preserved':True,'source_sha256':{str(f):hashlib.sha256(f.read_bytes()).hexdigest()for f in [primfile,sofafile,anchorfile,bridgefile,pathfile,rescuefile]}},ensure_ascii=False,indent=2))
+-src=root/'10_图件/fig03_forest_ch01.R';s=src.read_text();t=s.replace('out_dir     <- "'+str(root/'10_图件/out/fig03')+'"','out_dir     <- "'+str(p/'NEW')+'"').replace('ch01_dir    <- "'+str(root/'08_CH01/out')+'"','ch01_dir    <- "'+str(i/'ch01')+'"')
+-oldfmt='fmt_p <- function(p) vapply(p, fmt_p1, character(1))';assert t.count(oldfmt)==1;t=t.replace(oldfmt,'# CH26 mechanical format: retain original digits, add omitted leading zero only.\nfmt_p <- function(p) sub(".", "0.", vapply(p, fmt_p1, character(1)), fixed = TRUE)')
+-(p/'fig03_NEW_minimal.R').write_text(t);(p/'NEW.diff').write_text(''.join(difflib.unified_diff(s.splitlines(True),t.splitlines(True),fromfile=str(src),tofile=str(p/'fig03_NEW_minimal.R'))))
+-print('Ready:',len(lineage),'unique scientific rows')

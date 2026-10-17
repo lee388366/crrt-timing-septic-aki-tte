@@ -1,0 +1,11 @@
+--- neutral_source/03a_timevarying_covariates.R
++++ candidate/03a_timevarying_covariates.R
+@@ -71,7 +71,7 @@
+            + COALESCE(epinephrine, 0)
+            + COALESCE(dopamine, 0) / 100.0
+            + COALESCE(phenylephrine, 0) * 0.1
+-           + COALESCE(vasopressin, 0) * 2.5  AS nee_dose
++           + (COALESCE(vasopressin, 0) / 60.0) * 2.5  AS nee_dose
+   FROM mimiciv_derived.vasoactive_agent
+ ")
+ 

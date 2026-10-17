@@ -1,0 +1,866 @@
+[
+  {
+    "destination": "legacy_snapshot/01_cohort_extraction/strictK3_primary_extract_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_primary_extract_v2.R",
+    "raw_source_sha256": "2d84778c3f24161bbf239ffd5bc81e34094de01955ada6d8e611f4452f19df50",
+    "payload_sha256": "f6db11bb0c41843ec7389ebf07ef5bd42154268c468ac6725a977337f1eebf7b",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/01_cohort_extraction/strictK3_baseline_covariates_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_baseline_covariates_v2.R",
+    "raw_source_sha256": "4328cd224d2709bc083c47dc30bd9b679747c63ec21ecc1118cded5c4931fc8e",
+    "payload_sha256": "484beaacb95d1657db476ca520de993ab45b37f5ade203294ba9d471910d57c3",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/01_cohort_extraction/strictK3_secondary_outcomes_v2.sql",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_secondary_outcomes_v2.sql",
+    "raw_source_sha256": "d9dd8e4d317839e5aa0698cc1cd296e2be080f8127d6db96303a10f6a89b93f5",
+    "payload_sha256": "d9dd8e4d317839e5aa0698cc1cd296e2be080f8127d6db96303a10f6a89b93f5",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/01_cohort_extraction/strictK3_v2_table1_mmr_spec.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_v2_table1_mmr_spec.R",
+    "raw_source_sha256": "27a3d1249227600346a5660cfa4ec6798514e2f8fbb1690d7999f797e8c12e8d",
+    "payload_sha256": "c55fba26b2a252191ce50d36cddb67a8c523297f3348aa68a35ba6bc4fbc3469",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/01_cohort_extraction/strictK3_QA_t0_contamination.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_QA_t0_contamination.R",
+    "raw_source_sha256": "37914c108998dfe2b02ccad460e16b6a72220f2a139ca138818da5745c448520",
+    "payload_sha256": "0cdd839f1d446d0a2f2c4fa5c931500e8d7d996fc4eabd5178fc2eb1f4fe6c8d",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/01_cohort_extraction/strictK3_v1_v2_comparison.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_v1_v2_comparison.R",
+    "raw_source_sha256": "3e55c5139ce5494a57c2abfd7158e2ccfb3e615934f78f71031b9bd782e84aad",
+    "payload_sha256": "3ffe7a3f8c465d65573e55aaba003894a380a916fb3bde42073763182104c472",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/01_cohort_extraction/c4_dod_check.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/c4_dod_check.R",
+    "raw_source_sha256": "264fb2c8ac8f8cda4ce02b61257926f4b07ee2ebc8490d6716801ebb22e15112",
+    "payload_sha256": "4b0387c4d41794482b6de9862622e2f0294a38fe91e919f67f7454451ad49a11",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/02_ccw_ipcw_primary/strictK3_run_timevarying_ccw_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_run_timevarying_ccw_v2.R",
+    "raw_source_sha256": "f988ff5ec2a4b5c70954ea2ec1dbf41e06a3f0d38290821eb35c4033beba4ce2",
+    "payload_sha256": "96637059bf19019148d4f7943ca3fde244e1a62d10f943a7c4ca2f9ab246ba56",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/02_ccw_ipcw_primary/strictK3_primary_outcomes_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_primary_outcomes_v2.R",
+    "raw_source_sha256": "e5030bd28fa76356587af9f9735283a79e389fe7bfc32f4018f42c03791526f4",
+    "payload_sha256": "19c99d9728f08dad4a5d61f0956e51492858f592aba42a4b8cb71a9aa2eb833d",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/02_ccw_ipcw_primary/strictK3_weight_diagnostics_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_weight_diagnostics_v2.R",
+    "raw_source_sha256": "6f565900db95b12ed0440de701d745cc46f5f012b08777743cfde2662ffc13a9",
+    "payload_sha256": "4af0729bdf64e69b2432d78cb45fa3b96d2e2668b95a3a210b959042afe66048",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/02_ccw_ipcw_primary/strictK3_QA_rfd_ph_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_QA_rfd_ph_v2.R",
+    "raw_source_sha256": "0baa3eff75c83c04c17ad92b6cf1aa155b71bb460773bca626b50d17ca8ee400",
+    "payload_sha256": "78d46e048d2d3ef76171554c85b4b184cc412f043524c871426b12fefc7d93e9",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/02_ccw_ipcw_primary/crude_cox_v2.R",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/脚本/crude_cox_v2.R",
+    "raw_source_sha256": "3b8f6f9631e5169d25f1aa03ecdd1c3cfab9d2b06b60c6d5744bba047b61db9f",
+    "payload_sha256": "a5f1a2d36986db03b1043006c1ed8cf4aee350cfdd2db16e6ce274b2b68cacda",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/03_sensitivity_original/strictK3_anchor_sensitivity_models_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_anchor_sensitivity_models_v2.R",
+    "raw_source_sha256": "0972813abdf8e03316d2e2cf9cdbe3ea84d1e1da1b6438527396f09684b6e113",
+    "payload_sha256": "121d6470d21a6a9d03072667fb0cd8b53cfde4a3c03811eeeee96147063068bc",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/03_sensitivity_original/strictK3_anchor_sensitivity_diagnostics_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_anchor_sensitivity_diagnostics_v2.R",
+    "raw_source_sha256": "faa8d8de74d72d04c892003e7ee2c07fea636be469a652c6cc13d43707fe39de",
+    "payload_sha256": "ef27b25620c822d1a6e8c2189004b66195ac933cd84c36814c85aa88a56b052d",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/03_sensitivity_original/strictK3_sofa_era_sensitivity_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_sofa_era_sensitivity_v2.R",
+    "raw_source_sha256": "4c33c537d529d0f77164097dc7f91750bc4ac9d7e438b53ca2e1ed9590e42fe4",
+    "payload_sha256": "567e548586c68cb29cf3494350635cb2afde06ee105f09d580a101110f62254e",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/03_sensitivity_original/strictK3_l0_only_sensitivity_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_l0_only_sensitivity_v2.R",
+    "raw_source_sha256": "801be3091d108f3ece7e706c2e36b8c59f6c7c196de27a43cf9c82ca3bdd73a7",
+    "payload_sha256": "f69c81da1613955dafb74f2987e9b2c9f11521e80880b3ec9369b85d48689967",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/03_sensitivity_original/strictK3_path_sensitivity_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_path_sensitivity_v2.R",
+    "raw_source_sha256": "b6a4332c5874cbc31f8d2d9f6c6c91834ccdf131459ee51f3d5b21cb4bd3cd02",
+    "payload_sha256": "feb62db5233992378501f21163ac91ede1cd45a1e9f5665cb6d85350ce24d18e",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/03_sensitivity_original/strictK3_rescue_sensitivity_models_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_rescue_sensitivity_models_v2.R",
+    "raw_source_sha256": "ffc49ae83bd7f8dd9a011d98d79d5d794dc9d7e03a4229153c5463162740e970",
+    "payload_sha256": "613c712ada462f64a851b6245b8839d45748f21af2d01103b33be28dfda6829e",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/03_sensitivity_original/strictK3_weighted_finegray_rfd_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_weighted_finegray_rfd_v2.R",
+    "raw_source_sha256": "099b42301b686fb2cd4e924e0707cc8f600282ea098d1311f2817caaa567ebc0",
+    "payload_sha256": "27354f43261d8aa812481ada1bfba5989eec08d776708df6791ab7d8a7b97d30",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/ch01_dod_primary.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/08_CH01/ch01_dod_primary.R",
+    "raw_source_sha256": "bd42dd53b78d327f7a64a4791da11991fd2af24dcf541446b386dff05756c28b",
+    "payload_sha256": "8e90454ead6f3a173001412e031b3213b8650176c4e66255be01ab9d5f0183a0",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/ch01_rmst_sensitivity.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/08_CH01/ch01_rmst_sensitivity.R",
+    "raw_source_sha256": "9c9b3648424ae07ce3752ade3e2cbde18526fa436ed262b55e1084931731a6c4",
+    "payload_sha256": "d82d376dc172e73d6748b1f4c64489dd9d79d62821fd40e5eadd3b87c063cad5",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/verify_pipeline.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/08_CH01/verify_pipeline.R",
+    "raw_source_sha256": "e6e24f7aa6665b6d6c786800d8d19c4b90ea6b8d17563df3b878c970cd1babf0",
+    "payload_sha256": "bb821f7460581d6a3ef69e72c3ef38d5fb160df257239fbc7d04f087bd051cef",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/extract_CH01_new.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/extract_CH01_new.R",
+    "raw_source_sha256": "d51d2cadd2063c3c1b3d2adda338a3875bb1133628858ef439e6a88beffccfc3",
+    "payload_sha256": "2db6d493eabdc45daa5c98b37066c16eabdf57b95260ae3a2340984dec7e6a05",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/secondary_NEW.sql",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/secondary_NEW.sql",
+    "raw_source_sha256": "e16d7ade29fb316e78508227778efee5983528355cfc39cef557f5f331f8f5a5",
+    "payload_sha256": "e16d7ade29fb316e78508227778efee5983528355cfc39cef557f5f331f8f5a5",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/compute_ch01_rollout_numbers.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/compute_ch01_rollout_numbers.R",
+    "raw_source_sha256": "0883c14f77d6f5b163be33b0d8267501268a2bdf415f2aa459930ccc82dfdfe0",
+    "payload_sha256": "8ef5262ec79d183d44b322cc2dfefa20c43674307ac542da735a01eba3209ea7",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/rerun_tableS4_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/rerun_tableS4_ch01.R",
+    "raw_source_sha256": "fcd87df00f1fa4465ac87e42a2beb54eab12ced8c5e19203854b9aa3951b14ff",
+    "payload_sha256": "0d01aab42c292b642bc272a6235b8ee80866b346417f092d5c15b042091aed8c",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/grace_period_sensitivity_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/grace_period_sensitivity_ch01.R",
+    "raw_source_sha256": "51302b71551004e6bd8d57fa259cc743a9ab45b13de61fa94c93e9ce8fa2b2fc",
+    "payload_sha256": "e1edc165ec4de7bb70c60e9dbc9b063faf24fda33b550258bd6f4eaa4de6c194",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/rmst_arms_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/rmst_arms_ch01.R",
+    "raw_source_sha256": "a79a47c5b3af49b652f9c49c575b53518304df0500b9c3d5c24bf1b97ccd6045",
+    "payload_sha256": "5f7cee25842b763916ee99d22192cad6bfa7ac050c8b36576dacede6105a894f",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/rerun_anchor_era2.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/rerun_anchor_era2.R",
+    "raw_source_sha256": "3e6557ffc1fa458bce24089be1d0847e83fc11144fcd5f55bc4c86c0c254b322",
+    "payload_sha256": "2ccf28b5799129e74bb8d016c3d4b4698e195b69c89d9e23a25065f401307e02",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/rerun_era_l0_final.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/rerun_era_l0_final.R",
+    "raw_source_sha256": "239dafa4dc1da7b9e8f769bf139e61ac927549747687a22f7cee0728718cf736",
+    "payload_sha256": "e6e4463c5442ac35a17ed575d518a97817f4b0d893e5fd32e807698406c3483a",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/extract_ab_final.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/extract_ab_final.R",
+    "raw_source_sha256": "a0a859ebd730f920cd9cafe6f30df3c59abfb77f180a2244223a8d00d347879d",
+    "payload_sha256": "762d4eae42c025c33c2e906073d2be6cf79d85a3c6952bbae34a74d5e49eecc5",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/ab2_NEW.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/ab2_NEW.R",
+    "raw_source_sha256": "eb4d421d5356b66ad10fc0c88d81cd00efc34807a9cd7a3b85700b7612563478",
+    "payload_sha256": "2a8058c54951ced5b3cab1d977593c8b8a953de96958eb72fb4bf9f728bb1ab0",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run13_NEW_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run13/run13_NEW_ch01.R",
+    "raw_source_sha256": "3c6dd082c5909a7324846941fc11f159de1571e8c380c30e9929bd1555acd5ad",
+    "payload_sha256": "cb858f90819312e9243798aecf374083e15203e11051af47e8beb0443360eb86",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run14_NEW_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run14/run14_NEW_ch01.R",
+    "raw_source_sha256": "00c1e298991f0bd37dfb2545d9a49b933e7a2ad058b2cc4ff40aa7f7fe341e04",
+    "payload_sha256": "68c74564299111b8be397039abe3d463993779bbac5da6d49868bd9bf19ab7d3",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run15_NEW_anchors_L0_era.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run15/run15_NEW_anchors_L0_era.R",
+    "raw_source_sha256": "b88cffc7cad64a74eaf3c6f19484d5cf97915aab7cf762e6116022234b585f73",
+    "payload_sha256": "b901bc53a39c0be15ac9e9686378d2e31de70054f33e619c784fb433c645b538",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run15_NEW_sofa_era.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run15/run15_NEW_sofa_era.R",
+    "raw_source_sha256": "2df358442b0f3bd861ca3532cf8a01e027c72a1b7e9d559f75202a44c4952213",
+    "payload_sha256": "30c6648ccc33e5bbc898a82c16aab22c9929d5386b9a809f2eb85216881f6719",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run15_build_rowvalues.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run15/run15_build_rowvalues.R",
+    "raw_source_sha256": "d4eac17ea0c92fcad9c78bc798b609597aede30834fbedf6a0ec959e104e2b7b",
+    "payload_sha256": "bb0c484eea453f9fac909b4fb34bba0f276290562e2202bf9acf3444dbf9d6d7",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run15_build_interface.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run15/run15_build_interface.R",
+    "raw_source_sha256": "bce6b9a94e70bce7b31a6edaa9c68b7f634fef062e0afcaa3d5db0723ce7f29e",
+    "payload_sha256": "9dc5ba53e41a8317a1b4649de892196d30a57466cb97c88b2d6b9e2e297a1dd6",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run17_NEW_path.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run17/run17_NEW_path.R",
+    "raw_source_sha256": "5a01e02214c3ae40930f908b2be21925a5f2fc873a7ce5f3c3c11a868d54005a",
+    "payload_sha256": "bc7c8d14a4af950cbe2349caf5a23d7c26d02aa377dc1dc5b6f19a779bae90aa",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run17_NEW_rescue.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run17/run17_NEW_rescue.R",
+    "raw_source_sha256": "6256f1de2d0c025d5f9c6f9d6fba49455828df75bc310ba61121d4b7b7b1b4de",
+    "payload_sha256": "fef39e3ab7e4e0b86f0de8ef332de6f8eb6731cdcba6e3a10ae2dce3a4b9cf58",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run17_build_interface.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run17/run17_build_interface.R",
+    "raw_source_sha256": "5a6853b795320e9502c242879ee5322422221be85239c28ddf12639a5970ac18",
+    "payload_sha256": "0329bde99ac5b83b8ff394537623c31d3f394b91e84ea3b22b64dcde7f3d689f",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run18_extend_rfd.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run18/run18_extend_rfd.R",
+    "raw_source_sha256": "45c651d5fdcaa7528b2b28df098234013f8e28124fc93a6f5d8e04d963f6a38c",
+    "payload_sha256": "4fa1b9545808ecfbc507490be6128eab76ed8ed01ff3a129763f0c72931b2b4f",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run18_build_interface.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run18/run18_build_interface.R",
+    "raw_source_sha256": "f019b0e3ea9b69c91ef094c21ccce5da1148a83cdabbd524d5b2bd0269274e50",
+    "payload_sha256": "16189caab93167bd026ba5ffa90470c4ce5ba59d765552ece74ad9478900fcbb",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run20_NEW_v1_outcomes.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run20/run20_NEW_v1_outcomes.R",
+    "raw_source_sha256": "7edb0cc4a5831a5c93dfe9d970f0a914eaae5e69c25d025b15fb93e2e97846b2",
+    "payload_sha256": "598c5d08de8797ed11722d2b47f44878cbdec7745c3317b952643e6a79d8a8a7",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run20_build_table.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run20/run20_build_table.R",
+    "raw_source_sha256": "288afb4f66215f36b69c5692d60864a2ad863f10d4746e55c51248d868282bcc",
+    "payload_sha256": "2051b5c0b5367ef5786fad05fe061e3bdd5c114690f5df49a1e72c98aeb19b3e",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/04_all_cause_28d_reanalysis/run21_NEW_l0.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/run21/run21_NEW_l0.R",
+    "raw_source_sha256": "9cfa51a630e35e67009aea1c583e4216a7ea08b914d02f7cf557f25d567a7d41",
+    "payload_sha256": "3a2e4e303b2ee532935a616734869d1dedda5bfb3ff7c682356a6789935d7f82",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/05_bias_and_bayesian/strictK3_v2_bayes_reanalysis.py",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_primary_v2/strictK3_v2_bayes_reanalysis.py",
+    "raw_source_sha256": "6ba6d6b6db0cd452ea65d7b13caffb3ea158be06d647c9d1677e827b82eb8387",
+    "payload_sha256": "6ba6d6b6db0cd452ea65d7b13caffb3ea158be06d647c9d1677e827b82eb8387",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/05_bias_and_bayesian/strictK3_v2_negctrl_qba.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_primary_v2/strictK3_v2_negctrl_qba.R",
+    "raw_source_sha256": "f9e4a54d3a80a0a7a3a6d32ee4ee2381e8a1e626e7e538f73c7b972bd2864035",
+    "payload_sha256": "a413f4ab7850874ee875ac25864bb77b2db779252d476d470502042337d7cb37",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/05_bias_and_bayesian/src_qba_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/src_qba_ch01.R",
+    "raw_source_sha256": "ca31bddd000830cc396db5ef461b4e3b1dd71e0347d9c3cf45e8815b04275905",
+    "payload_sha256": "22658d245bacf5cb3453ea3ea3203ebef28cc5e461bfca0b8376daaebd8d5c67",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/06_eICU_feasibility/04_eicu_diagnose_rescue.R",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/数据溯源_方法新段/eICU/04_eicu_diagnose_rescue.R",
+    "raw_source_sha256": "cbeb06e48a630afd7b27937e60f9f82910a8eae00558fa75dfa8f6e8c685986e",
+    "payload_sha256": "944f943c76a34acad958837dcb8644fab057acd30be5865b622422e19645ee70",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/06_eICU_feasibility/05_eicu_weight_model_sensitivity.R",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/数据溯源_方法新段/eICU/05_eicu_weight_model_sensitivity.R",
+    "raw_source_sha256": "d80f0050b1a516214e5972fdbda31eb26b5759c43414b2cc47500892abcc0389",
+    "payload_sha256": "b756374cd5f06571eba46bcf662aa0400b7fc13ca0cf8b1fb2d7c7c708e41c6f",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/figure1_flow_v2_from_mmr_source.R",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/图件源件_figure_source/figure1_flow_v2_from_mmr_source.R",
+    "raw_source_sha256": "5d78483e02c507985a0ad73d6ce4e2181b85ee93684f75f1f854f6523c42c53a",
+    "payload_sha256": "ba83fae7a6c616a7019a0f14d7aedc352c979c4bc843ab8a05053c340e23436a",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/fig02_cuminc_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/fig02_cuminc_ch01.R",
+    "raw_source_sha256": "1aea66f1e201b53a561eed6038e476d4ecd92c891eeab58ff317b8dfd016ac89",
+    "payload_sha256": "5327c2155a56f97cb74f35882529dbab593c7d6456f4626ae7552c47504ab75f",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/fig03_forest_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/fig03_forest_ch01.R",
+    "raw_source_sha256": "a4e3f33b5b4ce4df9101d8343b61e957c386d735895bcb1bd1ee189cdbff7456",
+    "payload_sha256": "ae1ad21ffb4b0e2ee280d778a984c2f6ce41ab61b4ad2d845cd3faef53ebe951",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/strictK3_v2_figures_icm_regen.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_primary_v2/strictK3_v2_figures_icm_regen.R",
+    "raw_source_sha256": "0f82ab377908d1847e120953f139d8f89b688a3b71896f0521f65a4b4359437d",
+    "payload_sha256": "4843a1dd13aa4b700c57d4d50de96f6347bda08d41357cfa71a981b57e5e2f97",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/strictK3_v2_figures_icm_regen_ARIAL.R",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/图件源件_figure_source/strictK3_v2_figures_icm_regen_ARIAL.R",
+    "raw_source_sha256": "833bf4829a434abf3d1ad5551fcc5b7dbe2a2b12e85a2c8e5e6502abfd447773",
+    "payload_sha256": "3994a0e23c74def51c3575c315f88f49c83552ad3c9625eb1a509a146299d54e",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/fig05_sofa_scan_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/fig05_sofa_scan_ch01.R",
+    "raw_source_sha256": "4471b9b955b3edcc4bb8f3f60652312f54bf5bbdd4915791456258ea58824526",
+    "payload_sha256": "4862e6da224c71928a3d6af8e543c548a35d1bfff4550accc98cb39b668a8a68",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/fig06_bayes_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/fig06_bayes_ch01.R",
+    "raw_source_sha256": "89b7ba08eff750895e63c6d618506b983140067509744cb8fd7174bd487a0817",
+    "payload_sha256": "c4f8770fe32f817389e6b3d7cab0d95c150a6c749efdfaa774fa590207a7ecdc",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "legacy_snapshot/07_figures/fig07_qba_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/fig07_qba_ch01.R",
+    "raw_source_sha256": "b6fc39845648fa58fc695bb039c0ea39da6e4313ab77671e6548b56bd4b46cee",
+    "payload_sha256": "1113ea0e15e3e3bf4f1a621ed6aba0d304d1a8700e76d4eaf4742f9e48132977",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/03a_timevarying_covariates.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/03a_timevarying_covariates.R",
+    "raw_source_sha256": "6a4ec8d5b85fc89c55fd4930be95b5205193f31cf722d9274a268b554e244749",
+    "payload_sha256": "2ac18b9319c9a787eb00a3c4bea8b90fb3c24cee67601a62d8a99b58f03bf15e",
+    "changes": [
+      "Validated hourlyNEE unit term only"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/03_ccw_ipcw.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/03_ccw_ipcw.R",
+    "raw_source_sha256": "31b649c6e8239323972e7fe235e636783707100c35c263639bf4ca5c431a05e0",
+    "payload_sha256": "02a7a4de09fe1b798382611609669b0943e421278acd215df9d0e1b2444fd453",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/strictK3_run_timevarying_ccw.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_run_timevarying_ccw.R",
+    "raw_source_sha256": "744da64e51bd3177114daefaeb4288a98d7599107c307f80a6d66e7f4e0b2f76",
+    "payload_sha256": "ad013edec2775a3bdbaf45a05ab8695525f8fd6f719b80c03b525d6e7b76d351",
+    "changes": [
+      "Package-relative core resolver plus path-token redirect after neutralization; original scientific code and original wrapper patches retained"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/strictK3_run_timevarying_ccw_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_run_timevarying_ccw_v2.R",
+    "raw_source_sha256": "f988ff5ec2a4b5c70954ea2ec1dbf41e06a3f0d38290821eb35c4033beba4ce2",
+    "payload_sha256": "db900ac2a772ace955083167f2c2f6f4cfd134d67e47cc42977906580de77ce2",
+    "changes": [
+      "Package-relative core resolver plus path-token redirect after neutralization; original scientific code and original wrapper patches retained"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/strictK3_primary_extract.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_primary_extract.R",
+    "raw_source_sha256": "d8cc55e3b722e07ea95a7d757c87bba45c9f0f0ac68f874c498dc9b6732dccc3",
+    "payload_sha256": "44297d6439cfd9b3d5a7fab1f2813162f6f6fab99a0f2e342ede98d5dd7216d2",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/strictK3_primary_extract_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_primary_extract_v2.R",
+    "raw_source_sha256": "2d84778c3f24161bbf239ffd5bc81e34094de01955ada6d8e611f4452f19df50",
+    "payload_sha256": "f6db11bb0c41843ec7389ebf07ef5bd42154268c468ac6725a977337f1eebf7b",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/strictK3_baseline_covariates.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_baseline_covariates.R",
+    "raw_source_sha256": "c07243fb868fdbec137734cb7ced5a980fc64c40077f34f48cc60153a8cd33c5",
+    "payload_sha256": "54041d76233e3c88dd2cc37edfd51ec1d6a0a8b1646ff037c6aa0864e52f5e1b",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/analysis/strictK3_baseline_covariates_v2.R",
+    "source_id": "CRRT_ANALYSIS_ROOT/strictK3_baseline_covariates_v2.R",
+    "raw_source_sha256": "4328cd224d2709bc083c47dc30bd9b679747c63ec21ecc1118cded5c4931fc8e",
+    "payload_sha256": "484beaacb95d1657db476ca520de993ab45b37f5ade203294ba9d471910d57c3",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/manuscript/grace_period_build_tv48.R",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/数据溯源_grace_period/grace_period_build_tv48.R",
+    "raw_source_sha256": "844fef6a7540582a9189f935cb6a114f19397f02555bd206930c72be803000bf",
+    "payload_sha256": "713e7e2a62946226a7caec104f0ac06c05f7f94739b15a578f63304ff5850fe0",
+    "changes": [
+      "Validated 48hNEE unit term only"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/table1/table1_rich_sofa8_14_v2.R",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/脚本/table1_rich_sofa8_14_v2.R",
+    "raw_source_sha256": "443b77ba89ea61000d8117f3d4cc3c6b02e558073ee71050f7d94d00b75da2c3",
+    "payload_sha256": "1ff05e05b0e5621fcd381115490690e746a6c60f8d4570723ee9f2796aacec92",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/table1/table1_9missing_v2_extract.sql",
+    "source_id": "CRRT_MANUSCRIPT_ROOT/11_母板重建_数据回补/脚本/table1_9missing_v2_extract.sql",
+    "raw_source_sha256": "da0e03364a4f6013bb80d07b95e916e1dcdc16e3aa47ca0dbbf2d442bf6a896a",
+    "payload_sha256": "da0e03364a4f6013bb80d07b95e916e1dcdc16e3aa47ca0dbbf2d442bf6a896a",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/figures/NEW_adapter.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_fig2/NEW_adapter.R",
+    "raw_source_sha256": "0ff62e46bf020243420fd5681981c191de5ec2e82acd17a217541587b715340c",
+    "payload_sha256": "917a42a09e5647fa261ef6e41def1096bf890a4f9bfe8beb898678ba3d3a3056",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/figures/fig03_NEW_minimal.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_fig3/fig03_NEW_minimal.R",
+    "raw_source_sha256": "b2049da46e0494592527aa8e66d481df1ed73f0f6d48ae1f787da7099205d1c8",
+    "payload_sha256": "9e926fcc7bb6671b685e80d5f6aaf1d9b6f626444c982756e5b0e62d36ac0935",
+    "changes": [
+      "Only Figure3 output and same-version primary interface directory; original plot/CH26 parameters retained"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/figures/fig06_bayes_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/fig06_bayes_ch01.R",
+    "raw_source_sha256": "89b7ba08eff750895e63c6d618506b983140067509744cb8fd7174bd487a0817",
+    "payload_sha256": "4ced2796406ff711fc9fdefca5f941324ba270faae1d5ea6c9a8fa4b41367982",
+    "changes": [
+      "Use already validated current S5 three-line facet label wrap only",
+      "Only originaltheta/se inputs now read authoritative summaryCSV; priors/thresholds unchanged",
+      "Require explicitly isolated Bayesian figure output directory"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/bias/src_qba_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/src_qba_ch01.R",
+    "raw_source_sha256": "ca31bddd000830cc396db5ef461b4e3b1dd71e0347d9c3cf45e8815b04275905",
+    "payload_sha256": "170862eccad4753049d007230c2798840f603cab80585b179c2e459791a20b4c",
+    "changes": [
+      "Currententry common_outcome default; legacy mode retained"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/bias/fig07_qba_ch01.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/10_图件/fig07_qba_ch01.R",
+    "raw_source_sha256": "b6fc39845648fa58fc695bb039c0ea39da6e4313ab77671e6548b56bd4b46cee",
+    "payload_sha256": "7f8f8f64dd260e9516628b59a4e85cb2dd282a9026555387eea04660a3e6ac84",
+    "changes": [
+      "Currentcommon figure flag and explicit input/output directories; plot parameters unchanged"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/bias/hr_catalog_current_ast.py",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_bayes/NEW/hr_catalog_current_ast.py",
+    "raw_source_sha256": "66dcad8e6b67fa60f22f4b4ab622d3e0fc21d554e6de452a506448da9496e1cd",
+    "payload_sha256": "40a274ace5aff95dfa7c8dc9822a0a77fdd82afd15db5e0aa10c7c742221495b",
+    "changes": [
+      "Standalone I/O adapter around exact original currentHR AST; no newprior or RMST"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/outcomes/run20_NEW_minimal.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_v1_outcomes/run20_NEW_minimal.R",
+    "raw_source_sha256": "9a1b1097b10556e4acf14ec248347be2016c15eeb254c6f656b7c3aa2270172a",
+    "payload_sha256": "de5f004d1aabcef9dff0c275f848c8d95c036dd4f4f4d6cf533c80d01e4912ff",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/outcomes/run15_NEW_pathonly.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_sofa_era/run15_NEW_pathonly.R",
+    "raw_source_sha256": "13d66dbd41049c23ed4fb0a447f16b41bfa0ee05c141cfc19ed6bea44682feaf",
+    "payload_sha256": "f0cf083deb3fba2e39c521e69e93e1adf777fe4abe18ffed6077ebb4fbeb1e8e",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/outcomes/run17_path_NEW_offline.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_path/run17_path_NEW_offline.R",
+    "raw_source_sha256": "4c54b5b52506e0f1cbc71ac2101da57905e3fcf37404ea562a0da9f9194050a9",
+    "payload_sha256": "0d8b5c90b2cbed159af1562911767f7b3629ec4304382384840eb4de96019dcd",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/outcomes/run21_l0_NEW_offline.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_l0/run21_l0_NEW_offline.R",
+    "raw_source_sha256": "a5f7af7568293ffe573f3d2d27ee2f85d931f75636f5657001588e7d3f50e02b",
+    "payload_sha256": "ad95e919198f7e969683356a2d0776d562e90ad254b4227098cc0614733b6d86",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/outcomes/diagnostics_NEW_pathonly.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_diagnostics/diagnostics_NEW_pathonly.R",
+    "raw_source_sha256": "34b7452361931bd4cf3a8980e5d472e022342dd60bd0d9d3f90fd362af2b154f",
+    "payload_sha256": "26f8a305fca50d4cc1c0291d91a4a9cf52a9d4086a00f5cb37221e2441621a8b",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/outcomes/NEW_pathonly.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_tableS4/NEW_pathonly.R",
+    "raw_source_sha256": "ab734ee2c490375c39d39c24338aefb270edd7cb8bc18b9323cd1ed248f79690",
+    "payload_sha256": "cfa155158db7c1709a95161f6612554d8794a81b48f39fa5c7842e98e33a7f3d",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/outcomes/grace_NEW_original_adapter.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_grace/grace_NEW_original_adapter.R",
+    "raw_source_sha256": "3d1e73db30eb44847f5e1efd84d5b6e1d0ead8718d70e0ebe5be4f8dabc2f82b",
+    "payload_sha256": "087d816efdbaf35eb74176eeeeb57b614a9f8f251060f13df61c3ac648e849ba",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/primary/ch01_dod_primary.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/08_CH01/ch01_dod_primary.R",
+    "raw_source_sha256": "bd42dd53b78d327f7a64a4791da11991fd2af24dcf541446b386dff05756c28b",
+    "payload_sha256": "8bcb8fda6f2a138d15c17130dce7c8a64e43ced9692e30b20e418f71124783ad",
+    "changes": [
+      "Only primary/RMST output/input leaves; DB lookup replaced by credentialed local DOD snapshot, seed/functions/loops unchanged"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/primary/ch01_rmst_sensitivity.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/08_CH01/ch01_rmst_sensitivity.R",
+    "raw_source_sha256": "9c9b3648424ae07ce3752ade3e2cbde18526fa436ed262b55e1084931731a6c4",
+    "payload_sha256": "f8f6ed166b6c76324d4160e9dc870226851aca7464943261632edf7c30595e40",
+    "changes": [
+      "Only primary/RMST output/input leaves; DB lookup replaced by credentialed local DOD snapshot, seed/functions/loops unchanged"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/secondary/run13/ORIGINAL_OFFLINE_PATH_ADAPTER.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_secondary/NEW/run13/ORIGINAL_OFFLINE_PATH_ADAPTER.R",
+    "raw_source_sha256": "7a9e85094ecefcf7a3d00eef6c8660c800e1f8aa85c69c31b2eeeb3871cd16e8",
+    "payload_sha256": "d8f2dd8658d4f6a3aac04f32d24531c042608d27757a75cbc090016c5899ceda",
+    "changes": [
+      "Only offline input/output leaves and run18→same-version run13 dependency; original statistical AST unchanged"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/secondary/run18/ORIGINAL_OFFLINE_PATH_ADAPTER.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_secondary/NEW/run18/ORIGINAL_OFFLINE_PATH_ADAPTER.R",
+    "raw_source_sha256": "53b6ff9cae8cdb973ca0052f1e83e9a1a6c0911c192b724502d3a17719e1725d",
+    "payload_sha256": "739f074cc310c911a09e4bc87fe45a401effc3a52f0797984e6b8916e6139804",
+    "changes": [
+      "Only offline input/output leaves and run18→same-version run13 dependency; original statistical AST unchanged"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/secondary/secondary_NEW.sql",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/secondary_NEW.sql",
+    "raw_source_sha256": "e16d7ade29fb316e78508227778efee5983528355cfc39cef557f5f331f8f5a5",
+    "payload_sha256": "e16d7ade29fb316e78508227778efee5983528355cfc39cef557f5f331f8f5a5",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/acidbase/median/NEW_adapter.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_acidbase/median/NEW_adapter.R",
+    "raw_source_sha256": "cd2bac0a1b3c456c6417c045e485704163c3d610bc1af22924ec4041b7a81367",
+    "payload_sha256": "0e1ab04824a5137723b86526842fec2b52a8a3cd1b499472195822141f51683a",
+    "changes": [
+      "Only baseline/hourly, acidbase, DOD and isolated output paths; original formula/imputation/seed/grace arguments retained"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/acidbase/missing_indicator/NEW_adapter.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_acidbase/missing_indicator/NEW_adapter.R",
+    "raw_source_sha256": "65372aa0d7c23eae8cb331e98b39aae032899006639c3a02c971df2e22fc6541",
+    "payload_sha256": "f4a904d4bda9b6e09e49503c46f0b884b1420dd97a502bea3745466d9999632c",
+    "changes": [
+      "Only baseline/hourly, acidbase, DOD and isolated output paths; original formula/imputation/seed/grace arguments retained"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/anchor/NEW_selected_original_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_anchor_outcomes/NEW_selected_original_AST.R",
+    "raw_source_sha256": "92390dc099d7ef899e2a551986f63039771f47e332e2bf1f478ce230fb6cb8a8",
+    "payload_sha256": "5003ab9d6e44fa12cb3b24e462d4557283b3941600e6ce02c267b78eea8fdc9c",
+    "changes": [
+      "Only two independent branch ccw paths and DOD; original eight calls/labels retained; append CSV serialization"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/rescue/run_cox_ORIGINAL_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_rescue_outcomes/run_cox_ORIGINAL_AST.R",
+    "raw_source_sha256": "ae36505750b6844914d0ec0c02a338de348de347069124c3e9bee50ca48b32f0",
+    "payload_sha256": "ae36505750b6844914d0ec0c02a338de348de347069124c3e9bee50ca48b32f0",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/rescue/ch01_recode_ORIGINAL_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_rescue_outcomes/ch01_recode_ORIGINAL_AST.R",
+    "raw_source_sha256": "30acbdad3099c1043df2dd2cc67ee43e94dbcf9490323f3af9e042d65a7e4622",
+    "payload_sha256": "30acbdad3099c1043df2dd2cc67ee43e94dbcf9490323f3af9e042d65a7e4622",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/rescue/make_variant_ORIGINAL_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_rescue_outcomes/make_variant_ORIGINAL_AST.R",
+    "raw_source_sha256": "e255d7c7b6d594c065a77b0ed7fefde646d09386bbae27aa5ec80b87333a6e79",
+    "payload_sha256": "e255d7c7b6d594c065a77b0ed7fefde646d09386bbae27aa5ec80b87333a6e79",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/rescue/out_ORIGINAL_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_rescue_outcomes/out_ORIGINAL_AST.R",
+    "raw_source_sha256": "08404a51a89f04e54620db625c3ea7884b5928f523bcad7ab4f844bafdd8817a",
+    "payload_sha256": "08404a51a89f04e54620db625c3ea7884b5928f523bcad7ab4f844bafdd8817a",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/rescue/variant_cohorts_ORIGINAL_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_rescue_outcomes/variant_cohorts_ORIGINAL_AST.R",
+    "raw_source_sha256": "6a442fba1d5beab16628b12ed47f9d982505eb447afbb2d451182ab96fe37a63",
+    "payload_sha256": "6a442fba1d5beab16628b12ed47f9d982505eb447afbb2d451182ab96fe37a63",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/figure3_interface/assemble_existing_16_sources.py",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_fig3/assemble_existing_16_sources.py",
+    "raw_source_sha256": "96048215b26d13dcf6e9feebc8c13d1af9ef348eca30ba7ac110400820214054",
+    "payload_sha256": "b66227fc8973fb127fe75a53f4dcd3baf952dc0bdb4cf6e430683e7190ad1569",
+    "changes": [
+      "Original16row assembly functions/calls/order/count checks unchanged; env-only aggregateI/O and provenance path serialization; omit terminal renderer-code-generation block, use shipped renderer"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/figure3_interface/BRIDGE_original_functions_calls_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_fig3/BRIDGE_original_functions_calls_AST.R",
+    "raw_source_sha256": "49003bb2c47d97198b83f120f97d28b796d2f4be73a03ef0d2c8260fde441c56",
+    "payload_sha256": "49003bb2c47d97198b83f120f97d28b796d2f4be73a03ef0d2c8260fde441c56",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/figure3_interface/provenance/bridge_original_run15_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_fig3/bridge_original_run15_AST.R",
+    "raw_source_sha256": "ba2ded14a2dac12514dbdfa3afe00718751439bfdf843274a2c7fbd525cde112",
+    "payload_sha256": "571a96410d7b7f0847249938ef1c7162dda522ee2d920a9f61f1e461a8be2a28",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/supp_figures/S3/NEW_adapter.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_supp_figures/S3/NEW_adapter.R",
+    "raw_source_sha256": "d5d6db0f0181b42f62e7b959221aa0b9fc403cd4d22735998f92624de1994856",
+    "payload_sha256": "82ae303428ca935f26028553e29ec8b88274fd9bb28e835b53487a203263b107",
+    "changes": [
+      "Only output I/O; original bandscan input env and full plot preserved"
+    ],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/diagnostics/wdiag_ORIGINAL_AST.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_diagnostics/wdiag_ORIGINAL_AST.R",
+    "raw_source_sha256": "11f943524509f50e2b77ace5cb34944993f5122ed6f702f6bea7a0b87ea3daa6",
+    "payload_sha256": "11f943524509f50e2b77ace5cb34944993f5122ed6f702f6bea7a0b87ea3daa6",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/mortality/NEW_hospital_PATH_ONLY.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_mortality_sensitivity/NEW_hospital_PATH_ONLY.R",
+    "raw_source_sha256": "1c96e3f7af6f1f2c1ead62ac4f2ef0b334d669c563597c698cc5fd0c19d8341a",
+    "payload_sha256": "eaaed8e61b30541649684615952bdb0cfbcd2bacf07e6184f69568e042bb593b",
+    "changes": [],
+    "path_credential_adaptation": true
+  },
+  {
+    "destination": "current_sources/falsification/NEW_original_prefix.R",
+    "source_id": "CRRT_WORKSPACE_ROOT/09_工作稿/out/ch24_q4_corrected_falsification/NEW_original_prefix.R",
+    "raw_source_sha256": "079b7d13cff8ec665a1615fde0b7b2377b07cb642fea91a3e67fd16844ff51bc",
+    "payload_sha256": "8c3b5ef1367dc5af61a909b345b7062e23e9773dee5d440b10af09e832601a66",
+    "changes": [
+      "CH29 six existing rows; only configured data and isolated output paths, original statistical functions/calls unchanged"
+    ],
+    "path_credential_adaptation": true
+  }
+]

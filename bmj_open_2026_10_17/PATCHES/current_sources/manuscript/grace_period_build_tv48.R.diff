@@ -1,0 +1,11 @@
+--- neutral_source/grace_period_build_tv48.R
++++ candidate/grace_period_build_tv48.R
+@@ -30,7 +30,7 @@
+   filter(charttime>=window_start,charttime<window_end) %>% group_by(stay_id,hour_index) %>%
+   summarise(map_h=mean(map,na.rm=TRUE),.groups="drop")
+ 
+-vaso <- dbGetQuery(con,"SELECT stay_id,starttime,endtime, COALESCE(norepinephrine,0)+COALESCE(epinephrine,0)+COALESCE(dopamine,0)/100.0+COALESCE(phenylephrine,0)*0.1+COALESCE(vasopressin,0)*2.5 AS nee_dose FROM mimiciv_derived.vasoactive_agent")
++vaso <- dbGetQuery(con,"SELECT stay_id,starttime,endtime, COALESCE(norepinephrine,0)+COALESCE(epinephrine,0)+COALESCE(dopamine,0)/100.0+COALESCE(phenylephrine,0)*0.1+(COALESCE(vasopressin,0)/60.0)*2.5 AS nee_dose FROM mimiciv_derived.vasoactive_agent")
+ nee_hourly <- time_grid %>% select(stay_id,hour_index,window_start,window_end) %>%
+   left_join(vaso,by="stay_id",relationship="many-to-many") %>%
+   filter(starttime<window_end,endtime>window_start) %>% group_by(stay_id,hour_index) %>%

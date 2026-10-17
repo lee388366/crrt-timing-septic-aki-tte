@@ -1,0 +1,35 @@
+--- neutral_source/NEW_selected_original_AST.R
++++ candidate/NEW_selected_original_AST.R
+@@ -1,6 +1,6 @@
+ suppressPackageStartupMessages({library(dplyr);library(survival);library(readr)})
+ B <- file.path(Sys.getenv("CRRT_ANALYSIS_ROOT"), "strictK3_primary_v2")
+-dod <- readRDS(file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_other_cohort_plan/dod_plan/UNION_subject_dod_FROM_DB.rds")) %>% mutate(dod = as.Date(dod))
++dod <- readRDS(Sys.getenv("CRRT_DOD_RDS")) %>% mutate(dod = as.Date(dod))
+ mk <- function(x){
+   x %>% distinct(clone_id, .keep_all = TRUE) %>% left_join(dod, by = "subject_id") %>%
+   mutate(t0 = as.POSIXct(t0, tz = "UTC"), deathtime = as.POSIXct(deathtime, tz = "UTC"),
+@@ -29,7 +29,7 @@
+ 
+ 
+ rows <- list()
+-a_raw <- readRDS(file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_other_weights/anchor_minus6h/NEW/data/ccw_final.rds"))
++a_raw <- readRDS(Sys.getenv("CRRT_ANCHOR_MINUS6_CCW"))
+ a_raw$sf <- factor(a_raw$strategy, levels = c("B_deferred", "A_early"), labels = c("Deferred CRRT", "Early CRRT"))
+ rows[["6h_old_eq"]]  <- cox1(as.data.frame(a_raw)[a_raw$equipoise %in% TRUE, ], "legacy K3-6h anchor (OLD dao)", "SOFA 8-14", tcol = "follow_days", ecol = "event")
+ rows[["6h_old_all"]] <- cox1(as.data.frame(a_raw), "legacy K3-6h anchor (OLD dao)", "Full cohort", tcol = "follow_days", ecol = "event")
+@@ -38,7 +38,7 @@
+ rows[["6h_new_all"]] <- cox1(a, "legacy K3-6h anchor (NEW CH-01)", "Full cohort")
+ 
+ ## ---- 2) KDIGO2 anchor ----
+-k_raw <- readRDS(file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_other_weights/anchor_stage2/NEW/data/ccw_final.rds"))
++k_raw <- readRDS(Sys.getenv("CRRT_ANCHOR_STAGE2_CCW"))
+ k_raw$sf <- factor(k_raw$strategy, levels = c("B_deferred", "A_early"), labels = c("Deferred CRRT", "Early CRRT"))
+ rows[["k2_old_eq"]]  <- cox1(as.data.frame(k_raw)[k_raw$equipoise %in% TRUE, ], "KDIGO2 anchor (OLD dao)", "SOFA 8-14", tcol = "follow_days", ecol = "event")
+ rows[["k2_old_all"]] <- cox1(as.data.frame(k_raw), "KDIGO2 anchor (OLD dao)", "Full cohort", tcol = "follow_days", ecol = "event")
+@@ -48,3 +48,6 @@
+ 
+ 
+ out <- bind_rows(rows)
++
++dir.create(Sys.getenv("CRRT_ANCHOR_OUT"),recursive=TRUE,showWarnings=FALSE)
++readr::write_csv(out,file.path(Sys.getenv("CRRT_ANCHOR_OUT"),"anchor_original_eight_rows.csv"))

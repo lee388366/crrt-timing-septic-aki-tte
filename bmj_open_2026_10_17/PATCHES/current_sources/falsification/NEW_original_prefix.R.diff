@@ -1,0 +1,15 @@
+--- neutral_source/NEW_original_prefix.R
++++ candidate/NEW_original_prefix.R
+@@ -11,9 +11,9 @@
+ set.seed(20260716)
+ 
+ base_dir <- file.path(Sys.getenv("CRRT_ANALYSIS_ROOT"), "strictK3_primary_v2")
+-data_dir <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_inputs")
+-results_dir <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_falsification/NEW")
+-figures_dir <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_falsification/NEW")
++data_dir <- Sys.getenv("CRRT_V2_DATA_DIR")
++results_dir <- Sys.getenv("CRRT_FALSIFICATION_OUT")
++figures_dir <- Sys.getenv("CRRT_FALSIFICATION_OUT")
+ dir.create(results_dir, showWarnings = FALSE, recursive = TRUE)
+ dir.create(figures_dir, showWarnings = FALSE, recursive = TRUE)
+ 

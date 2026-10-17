@@ -1,0 +1,393 @@
+{
+  "scope": "Manuscript object/source inventory; local NEE-corrected candidates are not asserted formally promoted. Data/results not shipped; artifact hashes only.",
+  "objects": [
+    {
+      "object": "Figure 1",
+      "title": "Cohort flow",
+      "packaged_source_paths": [
+        "legacy_snapshot/07_figures/figure1_flow_v2_from_mmr_source.R",
+        "current_sources/analysis/strictK3_primary_extract_v2.R"
+      ],
+      "local_result_evidence": [],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original flow source retained; counts derive original extraction. No new extraction/render run."
+    },
+    {
+      "object": "Figure 2",
+      "title": "Weighted cumulative mortality",
+      "packaged_source_paths": [
+        "current_sources/figures/NEW_adapter.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_fig2/RESULT_VALIDATION.json",
+          "sha256": "b034668055faf30c7c39a2a3d3eb548f4c3079a275cd7692c85e64b35aa14051",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original source located; portable runtime unexecuted"
+    },
+    {
+      "object": "Figure 3",
+      "title": "16-row sensitivity forest",
+      "packaged_source_paths": [
+        "current_sources/figure3_interface/assemble_existing_16_sources.py",
+        "current_sources/figure3_interface/run_era_L0_existing_weights.R",
+        "current_sources/figure3_interface/BRIDGE_original_functions_calls_AST.R",
+        "current_sources/figures/fig03_NEW_minimal.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_fig3/16_ROW_SOURCE_LINEAGE.json",
+          "sha256": "798d5eb00b87da1d21ff860d029a27aa2c37d8f9a0379d4756cb59920a46b1e7",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_fig3/BRIDGE_NEW_4.csv",
+          "sha256": "5d5075313089af1f6e51fadd765751b88b3d83834e661c6d74be210f02e0ebc5",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_fig3/VALIDATION_REPORT.json",
+          "sha256": "6059a9479ffdd22f3deddbda97790cfeda00983140aeba703c4ffea6ae4d07a3",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original16row order/labels/N/early checks retained. Independent SOFA/anchor/L0/path/rescue/era inputs. External original aggregate templates required; not patient data. Bridge may fit original four Cox calls only if separately executed."
+    },
+    {
+      "object": "Table 1",
+      "title": "Primary rich/FULL baseline",
+      "packaged_source_paths": [
+        "current_sources/table1/table1_rich_sofa8_14_v2.R",
+        "current_sources/table1/table1_9missing_v2_extract.sql"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_table1_lineage/NEE_ROW_AUDIT.json",
+          "sha256": "1f6d20b8f86d624513bd49a40babcc694648f348f2778c8e5b5e18e3eb7accff",
+          "shipped": false
+        }
+      ],
+      "status": "EXPLICIT_FULL_GENERATOR_EXCEPTION",
+      "boundary": "Exact FULL generator/offline augmentation not located. Rich source+9-row SQL are pieces only; do not map basic mmr_spec as full generator. NEE display row already independently matches corrected field."
+    },
+    {
+      "object": "Table 2",
+      "title": "Primary mortality/Cox",
+      "packaged_source_paths": [
+        "current_sources/primary/ch01_dod_primary.R",
+        "legacy_snapshot/02_ccw_ipcw_primary/crude_cox_v2.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_primary/ch01_primary_dod_CORRECTED_CANDIDATE.csv",
+          "sha256": "0ad70b9ac8048431598a3a89505928c312c0b06940d157966cb0d34f809401d4",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Weighted current candidate from CH01. Crude original source unaffected by NEE; no fresh portable numerical regression claimed."
+    },
+    {
+      "object": "Table S1",
+      "title": "Overall baseline",
+      "packaged_source_paths": [],
+      "local_result_evidence": [],
+      "status": "EXPLICIT_GENERATOR_EXCEPTION",
+      "boundary": "CH28 approved S1 display now uses the current model six-hour baseline NEE mean; displayed quantiles unchanged, missing0 with zero-filling limitation disclosed. Exact original overall statistical generator remains UNLOCATED; basic Table1 comparator is not its generator. No replacement table invented.",
+      "comparator_only_not_generator": [
+        "legacy_snapshot/01_cohort_extraction/strictK3_v2_table1_mmr_spec.R"
+      ]
+    },
+    {
+      "object": "Table S2",
+      "title": "Weighted RMST point/interval",
+      "packaged_source_paths": [
+        "current_sources/primary/ch01_dod_primary.R",
+        "current_sources/primary/ch01_rmst_sensitivity.R",
+        "legacy_snapshot/04_all_cause_28d_reanalysis/rmst_arms_ch01.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_primary/ch01_primary_dod_CORRECTED_CANDIDATE.csv",
+          "sha256": "0ad70b9ac8048431598a3a89505928c312c0b06940d157966cb0d34f809401d4",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_rmst/NEW_BOOTSTRAP_SUMMARY.csv",
+          "sha256": "bb022c5598b8745c375317aea9fec4ee47d1192a82e7af92c84d9502d5b91e41",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Point estimates vs bootstrap mean are distinct original outputs; B1000/seed/merge unchanged. Original rmst_arms source is not a replacement for bootstrap CI."
+    },
+    {
+      "object": "Table S3",
+      "title": "Secondary renal recovery/RFD/ICU stay",
+      "packaged_source_paths": [
+        "current_sources/secondary/run13/ORIGINAL_OFFLINE_PATH_ADAPTER.R",
+        "current_sources/secondary/run18/ORIGINAL_OFFLINE_PATH_ADAPTER.R",
+        "current_sources/secondary/secondary_NEW.sql"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_secondary/NEW/run13/strictK3_v2_weighted_finegray_results.csv",
+          "sha256": "63ec8ab621838c7a885c87a4402981ba7db0f40286363bc25cd7129649761517",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_secondary/NEW/run18/strictK3_v2_rfd_extended_metrics.csv",
+          "sha256": "86c1cf3867213599f4a63d9f36de004597051c0f0bc21637a26df2ce0f87151b",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original source located; portable runtime unexecuted"
+    },
+    {
+      "object": "Table S4",
+      "title": "Sensitivity analyses",
+      "packaged_source_paths": [
+        "current_sources/outcomes/NEW_pathonly.R",
+        "current_sources/outcomes/run15_NEW_pathonly.R",
+        "current_sources/anchor/NEW_selected_original_AST.R",
+        "current_sources/acidbase/median/NEW_adapter.R",
+        "current_sources/acidbase/missing_indicator/NEW_adapter.R",
+        "current_sources/figure3_interface/run_era_L0_existing_weights.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_tableS4/NEW/tableS4_ch01.csv",
+          "sha256": "9735cacc971ca6cc5720c479b51d651e2d438bffb3f2892baf62d768d8917c73",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_sofa_era/NEW/strictK3_v2_sofa_strata_results.csv",
+          "sha256": "abd2d4b48967ab68236f9fb4321031aa74ecf43d33421e7aae25eb089a48f0ec",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "TableS4 adapter plus independent original sensitivity branches. Composite reporting must select same accepted NEE version; no unrelated weights."
+    },
+    {
+      "object": "Table S5",
+      "title": "L0 denominator",
+      "packaged_source_paths": [
+        "current_sources/outcomes/run21_l0_NEW_offline.R",
+        "current_sources/figure3_interface/BRIDGE_original_functions_calls_AST.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_l0/NEW/results/strictK3_v2_l0_only_sensitivity_results.csv",
+          "sha256": "49e4327f489748585873900f68faf55d92d21f136575094df84f68dd9dfbfa29",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original source located; portable runtime unexecuted"
+    },
+    {
+      "object": "Table S6",
+      "title": "Mortality ascertainment",
+      "packaged_source_paths": [
+        "current_sources/primary/ch01_dod_primary.R",
+        "current_sources/mortality/NEW_hospital_PATH_ONLY.R",
+        "current_sources/primary/ch01_rmst_sensitivity.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "08_CH01/out/mortality_ascertainment_by_group.csv",
+          "sha256": "dfbbc885b4d0aab13486c785ab6cf646d9478e57892ec0844f4077984f48ce06",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_mortality_sensitivity/NEW_NOON_EXACT_NUMBERS.csv",
+          "sha256": "3f2fcf7af6ad8051411e88962ed10acabc8dd4277c1ec934a0792130238d407f",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Ascertainment counts unaffected by NEE weights. Complete original noon block is in ch01_rmst_sensitivity.R; the historical lines33–48 extraction omits its closing brace and is not supplied as an executable entry."
+    },
+    {
+      "object": "Table S7",
+      "title": "Grace windows",
+      "packaged_source_paths": [
+        "current_sources/outcomes/grace_NEW_original_adapter.R",
+        "current_sources/manuscript/grace_period_build_tv48.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_grace/NEW/grace_period_sensitivity_ch01_results.csv",
+          "sha256": "d114ee5394286c36183a17319853629d1747dd2858e958c57039f527ea029053",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "12/24/48 original windows; 48h separate hourly inputs, original PH exception retained. Do not force24h cache into48h."
+    },
+    {
+      "object": "Table S8",
+      "title": "Seven Bayesian HR priors",
+      "packaged_source_paths": [
+        "current_sources/bias/hr_catalog_current_ast.py",
+        "current_sources/figures/fig06_bayes_ch01.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_bayes/NEW/current_hr_prior_catalog_results.csv",
+          "sha256": "3d817f8189db2b1cfc6df1a156bafeadbacae814c4a4cd9571388201e5c25672",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original3primary+4sensitivity HR priors, thresholds and2*1.959964 SE denominator unchanged. No new RMST prior catalog."
+    },
+    {
+      "object": "Figure S1",
+      "title": "Longitudinal DAG",
+      "packaged_source_paths": [
+        "legacy_snapshot/07_figures/DAG_master_28day_all_cause_DERIVED.pptx"
+      ],
+      "local_result_evidence": [],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Editable original diagram source; no statistical generator expected."
+    },
+    {
+      "object": "Figure S2",
+      "title": "CCW illustration",
+      "packaged_source_paths": [
+        "legacy_snapshot/07_figures/CCW_Supplement_FigureS2_v2.pptx"
+      ],
+      "local_result_evidence": [],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Editable original diagram source; no statistical generator expected."
+    },
+    {
+      "object": "Figure S3",
+      "title": "SOFA band scan",
+      "packaged_source_paths": [
+        "current_sources/outcomes/run15_NEW_pathonly.R",
+        "current_sources/supp_figures/S3/NEW_adapter.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_sofa_era/NEW/strictK3_v2_sofa_band_scan_results.csv",
+          "sha256": "e5e5506c60b62554ae6f2f5e0a610fa7faecb89ea07e3e4a2dd4787b47805bc2",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_supp_figures/S3/RESULT_VALIDATION.json",
+          "sha256": "9a7ade63c051c35dd1c9c8e8c7ea8e8cf51afaf52185d51236eaba043941a459",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original scan source and plot; input FIG5_BANDSCAN_CSV must use original export interface columns, not an arbitrary raw CSV. No cutpoint changed."
+    },
+    {
+      "object": "Figure S4",
+      "title": "Balance Love plot",
+      "packaged_source_paths": [
+        "current_sources/outcomes/diagnostics_NEW_pathonly.R",
+        "current_sources/diagnostics/wdiag_ORIGINAL_AST.R",
+        "legacy_snapshot/07_figures/strictK3_v2_figures_icm_regen_ARIAL.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_diagnostics/NEW/strictK3_v2_ipcw_balance_smd.csv",
+          "sha256": "9817f71e2dd80a1640df083cbf40af04541c0489617015304e3200e84df48782",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_diagnostics/NEW/strictK3_v2_original_wdiag.csv",
+          "sha256": "1e0f966edac30f23262a5a78bef2d007cf2a3c5b0cd762e9e777948d25601c53",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original combined figure script lines755–792 contain Love plot. Current corrected diagnostic CSV must replace matching original results leaf in isolated layout. Full combined pipeline is historical, must not run stale Bayes/QBA blocks to regenerate current figures."
+    },
+    {
+      "object": "Figure S5",
+      "title": "Bayesian primary priors",
+      "packaged_source_paths": [
+        "current_sources/figures/fig06_bayes_ch01.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_supp_figures/S5/RESULT_VALIDATION.json",
+          "sha256": "99bb985f1b87de6df20ce706141449ee62e95edd2e5e6b66261dbcf94c7fb9d9",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Reads authoritative current CSV rather than literal old inputs; existing validated label wrapping copied. This portable source has not been rendered."
+    },
+    {
+      "object": "Figure S6",
+      "title": "QBA contour",
+      "packaged_source_paths": [
+        "current_sources/bias/src_qba_ch01.R",
+        "current_sources/bias/fig07_qba_ch01.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_qba/NEW/ch24_q5_evalues_summary.csv",
+          "sha256": "f7a46794a020e2e3a9dbe0cef315b0cd136b1c6a29f656de49b53224bd47e397",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_qba/NEW/strictK3_v2_qba_tipping_array.csv",
+          "sha256": "39f72b91efa57b6c2d0124f0b892dd4571e9d35d09231894349f7b14fceb2f82",
+          "shipped": false
+        },
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_supp_figures/S6/RESULT_VALIDATION.json",
+          "sha256": "00b5d5ac498ebb4dc47b1068200c4ca0762870152e5a5c3370e4030fb65882f5",
+          "shipped": false
+        }
+      ],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original approved common-outcome transform/inverse. Keep observed/target conversion separate; current weighted falsification source must match NEE version, not historical QBA_ONLY cache."
+    },
+    {
+      "object": "Figure S7",
+      "title": "eICU feasibility",
+      "packaged_source_paths": [
+        "legacy_snapshot/06_eICU_feasibility/04_eicu_diagnose_rescue.R",
+        "legacy_snapshot/06_eICU_feasibility/05_eicu_weight_model_sensitivity.R",
+        "legacy_snapshot/07_figures/strictK3_v2_figures_icm_regen_ARIAL.R"
+      ],
+      "local_result_evidence": [],
+      "status": "SOURCE_LOCATED",
+      "boundary": "Original eICU sources and combined renderer lines795–836. No MIMIC NEE-unit patch transferred to eICU. Historical feasibility result is not external validation."
+    },
+    {
+      "object": "Table S9",
+      "title": "Pre-exposure falsification/measured-balance diagnostics, original six rows",
+      "packaged_source_paths": [
+        "current_sources/falsification/NEW_original_prefix.R"
+      ],
+      "local_result_evidence": [
+        {
+          "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_falsification/NEW/strictK3_v2_negctrl_results.csv",
+          "sha256": "6193ec72e66923bb3f1171fc4740d40b6761761e7de7de950bbb8dc7fdad2934",
+          "shipped": false
+        }
+      ],
+      "original_source_evidence": {
+        "workspace_relative_path": "09_工作稿/out/ch24_q4_corrected_falsification/NEW_original_prefix.R",
+        "sha256": "079b7d13cff8ec665a1615fde0b7b2377b07cb642fea91a3e67fd16844ff51bc"
+      },
+      "status": "SOURCE_LOCATED_CH29_APPROVED",
+      "boundary": "Six existing original rows: observed actual groups unweighted, assigned-strategy clones unweighted, assigned-strategy clones IPCW weighted, each for high baseline SOFA and creatinine. Weighted rows are measured-balance diagnostics, not causal falsification or proof of no confounding. No new endpoints/analysis. CSV data not shipped."
+    }
+  ],
+  "object_count": 21
+}

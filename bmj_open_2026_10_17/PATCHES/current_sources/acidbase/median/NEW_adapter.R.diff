@@ -1,0 +1,36 @@
+--- neutral_source/NEW_adapter.R
++++ candidate/NEW_adapter.R
+@@ -1,3 +1,4 @@
++dir.create(file.path(Sys.getenv("CRRT_ACIDBASE_OUT"),"median"),recursive=TRUE,showWarnings=FALSE)
+ # =============================================================================
+ # Q6 (reviewer) — Grace-period length sensitivity analysis
+ #
+@@ -21,8 +22,8 @@
+   library(dplyr); library(tidyr); library(lubridate); library(glmnet); library(survival); library(readr); library(DBI); library(RPostgres)
+ })
+ 
+-V2_DIR   <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_inputs")
+-OUT_DIR  <- file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_acidbase/median/NEW")
++V2_DIR <- Sys.getenv("CRRT_V2_DATA_DIR")
++OUT_DIR <- file.path(Sys.getenv("CRRT_ACIDBASE_OUT"),"median")
+ 
+ L0_vars <- c("age","sofa_t0","apsiii","creatinine_baseline",
+              "nee_at_t0","lactate_t0","uo_rate_t0","map_t0","cci",
+@@ -143,7 +144,7 @@
+ if (length(graces)==0) graces <- c(12L, 24L)
+ 
+ baseline <- readRDS(file.path(V2_DIR,"baseline.rds"))
+-.ab <- readRDS(file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/acidbase_t0_v2.rds"))
++.ab <- readRDS(Sys.getenv("CRRT_ACIDBASE_RDS"))
+ baseline <- baseline %>% left_join(.ab, by="stay_id")
+ for (.v in c("ph_t0","k_t0","hco3_t0")) baseline[[.v]][is.na(baseline[[.v]])] <- median(baseline[[.v]], na.rm=TRUE)
+ cat(sprintf("[AB] 缺失率填补后 ph=%.3f k=%.3f hco3=%.3f\n", median(baseline$ph_t0), median(baseline$k_t0), median(baseline$hco3_t0)))
+@@ -152,7 +153,7 @@
+ # 原口径：died_28d = 院内死亡（出院即删失）；原 follow_time_28d = min(至死亡, 至出院, 28)
+ # 新口径：28 天内全因死亡 = deathtime 或 patients.dod（不做出院删失）；随访至死亡或 28 天
+ # dod 仅到日粒度 ⇒ 采用午夜日界规则（与 CH-01 主分析一致）
+-.dod <- readRDS(file.path(Sys.getenv("CRRT_WORKSPACE_ROOT"), "09_工作稿/out/ch24_q4_corrected_grace/dod_local.rds"))
++.dod <- readRDS(Sys.getenv("CRRT_DOD_RDS"))
+ .dod$dod <- as.Date(.dod$dod)
+ baseline <- baseline %>%
+   left_join(.dod, by="subject_id") %>%
