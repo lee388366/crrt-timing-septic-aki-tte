@@ -1,17 +1,20 @@
-# CRRT timing target trial emulation
+# Early versus deferred CRRT in vasopressor-supported sepsis with KDIGO stage 3 AKI: target trial emulation
 
-## Current BMJ Open analysis source snapshot — 17 October 2026
+Analysis code for the manuscript *Early Continuous Renal Replacement Therapy Initiation and 28-Day All-Cause Mortality in Vasopressor-Supported Sepsis with Physiologic KDIGO Stage 3 Acute Kidney Injury: A Target Trial Emulation* (BMJ Open, under consideration).
 
-The current source package is in [bmj_open_2026_10_17](bmj_open_2026_10_17/). Earlier root-level scripts and the July 2026 commit remain available for provenance; they are not the current numerical source.
+## Repository layout
 
-This version publishes the 146-file source snapshot reviewed for the revised manuscript. The corresponding local ZIP SHA-256 is `16b33c77062c04ef312f46e692ef9f71caa5c42b2e75b21851df713bedf5a202`. Every file in that ZIP is represented in the versioned directory. The package README's “LOCAL REVIEW CANDIDATE” and “not uploaded” statements record its build-time status; this root notice records publication of that unchanged snapshot, not a claim of a fully portable validated release.
+| Folder | Contents |
+|---|---|
+| [`revision_2026_11/`](revision_2026_11/) | **Current analysis.** Corrected clone-censor-weighting implementation, all estimates, tables and figures reported in the revised manuscript and Additional file 1. Start here. |
+| [`upstream/`](upstream/) | Scripts that extracted the cohort and built the private input datasets (baseline covariates, hourly covariates, alternative-eligibility and urgent-indication branches, secondary-outcome dataset, Table 1 queries) read by `revision_2026_11/`. Estimation steps inside these scripts belong to the superseded implementation and are not used for reported results. |
 
-The principal correction converts the vasopressin dose term by dividing by 60 before applying the existing coefficient, retaining the original cohort, eligibility times, strategies and estimation specifications. The revised primary weighted HR is 1.05144237278742 (95% CI 0.92985279471207–1.18893126909961); the full-cohort HR is 1.11186346301827 (1.00869995484273–1.22557788811216). Source changes and object mappings are documented within the versioned package. Use its current sources and matching private inputs rather than historical estimates embedded in legacy scripts.
+The code as cited in the original October 2026 submission is preserved under the tag [`v2026.10.17-submission`](../../tree/v2026.10.17-submission). That version contained errors in the weighting implementation (time-fixed weights, an early-strategy weight model that could use post-initiation covariates, and baseline measurements recorded after time zero); the corrections and all changes are listed in Supplemental Table S15 of the revised manuscript and in [`revision_2026_11/README.md`](revision_2026_11/README.md).
 
-### Verification and limits
+## Data access
 
-Original local branches underwent old-result reproduction before the minimal correction and revised runs. The packaged portable adapters passed static parsing and source-equivalence checks; a fresh-environment end-to-end execution has **not** been performed. This repository does not claim that all figures and tables can be regenerated with one command. Complete offline reproduction of the rich/FULL Table 1 and overall Table S1 remains limited by missing historical augmentation inputs or generators; their documented NEE rows have separate verification. See the package README, object/source map, patch log and environment records for details.
+This is a code-only repository. No patient-level MIMIC-IV data, identifiers, database credentials or patient-level model objects are distributed. MIMIC-IV v3.1 is available to credentialed users through PhysioNet (https://physionet.org/content/mimiciv/3.1/) under its data use agreement. Scripts read local paths from environment variables (see `revision_2026_11/README.md`); patient-level intermediate files are written only to a local `private_data/` directory.
 
-### Data access
+## Licence
 
-This is a code-only repository. No patient-level MIMIC-IV/eICU data, clinical identifiers, database credentials or private model objects are distributed. Access to the source databases requires the applicable PhysioNet credentials and data use agreements. Configure private input paths separately and do not commit generated clinical data.
+MIT (see `LICENSE`).
