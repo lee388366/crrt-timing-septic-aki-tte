@@ -48,3 +48,6 @@ Built by the scripts in `../upstream/` from MIMIC-IV v3.1: `ch24_q4_corrected_in
 ## Changes from the October 2026 submission
 
 See Supplemental Table S15. In brief: time-varying instead of time-fixed weights with at-risk rows ending at death or ICU discharge; early-strategy weights no longer condition on post-initiation covariates; stabilising numerators depend on time only; protocol-specified strategy-specific truncation; baseline windows ending at t0 and strictly lagged hourly covariates; APS III removed from L0 (retained as sensitivity); two records with inconsistent timestamps removed (N = 2,461; primary population 1,469); BCa bootstrap CIs refitting the weight models; renal recovery as weighted day-28 proportions. Analyses that depended on the superseded implementation (eICU feasibility, covariate-stratified analyses, SOFA cut-point scan, SOFA-2 re-ascertainment, pre-exposure falsification endpoints, multiple-imputation diagnostics, 12:00 rule, tipping-point contour) were not repeated.
+
+### Deferred-group composition (Supplemental Table S16)
+`analysis/counts_deferred_2026-11-03.R` prints the composition of the deferred group by observed treatment before cloning (CRRT started after 24 hours; no CRRT by day 28, alive or dead; deaths within and after 24 hours of t0). Aggregate output only.
